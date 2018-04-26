@@ -1,0 +1,13 @@
+<launch>
+
+ <!-- joy node -->
+  <node respawn="true" pkg="joy"
+        type="joy_node" name="joy_node" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.15" />
+  </node>
+
+ <!-- Xbox controller teleop node -->
+  <node pkg="r1_teleop" type="r1_teleop.py" name="xbox_teleop" output="screen"/>
+
+</launch>
